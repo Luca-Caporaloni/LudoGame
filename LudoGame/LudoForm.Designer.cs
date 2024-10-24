@@ -31,8 +31,6 @@
             this.btnTirarDado = new System.Windows.Forms.Button();
             this.lblNumeroDado = new System.Windows.Forms.Label();
             this.lblTurno = new System.Windows.Forms.Label();
-            this.gridTablero = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.gridTablero)).BeginInit();
             this.SuspendLayout();
             // 
             // btnTirarDado
@@ -63,27 +61,17 @@
             this.lblTurno.TabIndex = 2;
             this.lblTurno.Text = "Turno: Jugador 1";
             // 
-            // gridTablero
-            // 
-            this.gridTablero.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridTablero.Location = new System.Drawing.Point(342, 135);
-            this.gridTablero.Name = "gridTablero";
-            this.gridTablero.Size = new System.Drawing.Size(240, 150);
-            this.gridTablero.TabIndex = 3;
-            // 
             // LudoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.gridTablero);
             this.Controls.Add(this.lblTurno);
             this.Controls.Add(this.lblNumeroDado);
             this.Controls.Add(this.btnTirarDado);
             this.Name = "LudoForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.gridTablero)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,7 +82,6 @@
         private System.Windows.Forms.Button btnTirarDado;
         private System.Windows.Forms.Label lblNumeroDado;
         private System.Windows.Forms.Label lblTurno;
-        private System.Windows.Forms.DataGridView gridTablero;
     }
 }
 
