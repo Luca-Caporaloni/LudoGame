@@ -1,0 +1,13 @@
+C:\Users\Maste\source\repos\LudoGame\LudoGame\bin\Debug\LudoGame.exe.config
+C:\Users\Maste\source\repos\LudoGame\LudoGame\bin\Debug\LudoGame.exe
+C:\Users\Maste\source\repos\LudoGame\LudoGame\bin\Debug\LudoGame.pdb
+C:\Users\Maste\source\repos\LudoGame\LudoGame\bin\Debug\BL.dll
+C:\Users\Maste\source\repos\LudoGame\LudoGame\bin\Debug\BL.pdb
+C:\Users\Maste\source\repos\LudoGame\LudoGame\obj\Debug\LudoGame.csproj.AssemblyReference.cache
+C:\Users\Maste\source\repos\LudoGame\LudoGame\obj\Debug\LudoGame.LudoForm.resources
+C:\Users\Maste\source\repos\LudoGame\LudoGame\obj\Debug\LudoGame.Properties.Resources.resources
+C:\Users\Maste\source\repos\LudoGame\LudoGame\obj\Debug\LudoGame.csproj.GenerateResource.cache
+C:\Users\Maste\source\repos\LudoGame\LudoGame\obj\Debug\LudoGame.csproj.CoreCompileInputs.cache
+C:\Users\Maste\source\repos\LudoGame\LudoGame\obj\Debug\LudoGame.csproj.Up2Date
+C:\Users\Maste\source\repos\LudoGame\LudoGame\obj\Debug\LudoGame.exe
+C:\Users\Maste\source\repos\LudoGame\LudoGame\obj\Debug\LudoGame.pdb

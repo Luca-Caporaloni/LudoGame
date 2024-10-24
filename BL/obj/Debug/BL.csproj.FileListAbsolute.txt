@@ -1,0 +1,6 @@
+C:\Users\Maste\source\repos\LudoGame\BL\bin\Debug\BL.dll
+C:\Users\Maste\source\repos\LudoGame\BL\bin\Debug\BL.pdb
+C:\Users\Maste\source\repos\LudoGame\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+C:\Users\Maste\source\repos\LudoGame\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+C:\Users\Maste\source\repos\LudoGame\BL\obj\Debug\BL.dll
+C:\Users\Maste\source\repos\LudoGame\BL\obj\Debug\BL.pdb
