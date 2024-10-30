@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{121F93EC-7D06-4ACC-A971-A0CCC686AE5D}|LudoGame\\LudoGame.csproj|solutionrelative:ludogame\\ludoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7F65D7E-9AF5-4383-8F50-25B5F7860478}|DAL\\DAL.csproj|c:\\users\\maste\\source\\repos\\ludogame\\dal\\juegorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7F65D7E-9AF5-4383-8F50-25B5F7860478}|DAL\\DAL.csproj|solutionrelative:dal\\juegorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA82C5CC-5D2F-4385-BC56-5297182CC465}|BL\\BL.csproj|c:\\users\\maste\\source\\repos\\ludogame\\bl\\juegoludo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FA82C5CC-5D2F-4385-BC56-5297182CC465}|BL\\BL.csproj|solutionrelative:bl\\juegoludo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FA82C5CC-5D2F-4385-BC56-5297182CC465}|BL\\BL.csproj|c:\\users\\maste\\source\\repos\\ludogame\\bl\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FA82C5CC-5D2F-4385-BC56-5297182CC465}|BL\\BL.csproj|C:\\Users\\Maste\\source\\repos\\LudoGame\\bl\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FA82C5CC-5D2F-4385-BC56-5297182CC465}|BL\\BL.csproj|solutionrelative:bl\\jugador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{121F93EC-7D06-4ACC-A971-A0CCC686AE5D}|LudoGame\\LudoGame.csproj|c:\\users\\maste\\source\\repos\\ludogame\\ludogame\\ludoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{FA82C5CC-5D2F-4385-BC56-5297182CC465}|BL\\BL.csproj|C:\\Users\\Maste\\source\\repos\\LudoGame\\bl\\juegoludo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FA82C5CC-5D2F-4385-BC56-5297182CC465}|BL\\BL.csproj|solutionrelative:bl\\juegoludo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{121F93EC-7D06-4ACC-A971-A0CCC686AE5D}|LudoGame\\LudoGame.csproj|C:\\Users\\Maste\\source\\repos\\LudoGame\\ludogame\\ludoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{121F93EC-7D06-4ACC-A971-A0CCC686AE5D}|LudoGame\\LudoGame.csproj|solutionrelative:ludogame\\ludoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C7F65D7E-9AF5-4383-8F50-25B5F7860478}|DAL\\DAL.csproj|C:\\Users\\Maste\\source\\repos\\LudoGame\\dal\\juegorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C7F65D7E-9AF5-4383-8F50-25B5F7860478}|DAL\\DAL.csproj|solutionrelative:dal\\juegorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,16 +34,15 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "JuegoRepository.cs",
               "DocumentMoniker": "C:\\Users\\Maste\\source\\repos\\LudoGame\\DAL\\JuegoRepository.cs",
               "RelativeDocumentMoniker": "DAL\\JuegoRepository.cs",
               "ToolTip": "C:\\Users\\Maste\\source\\repos\\LudoGame\\DAL\\JuegoRepository.cs",
               "RelativeToolTip": "DAL\\JuegoRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABBAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T20:54:16.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T20:54:16.672Z"
             },
             {
               "$type": "Document",
@@ -53,23 +52,21 @@
               "RelativeDocumentMoniker": "BL\\JuegoLudo.cs",
               "ToolTip": "C:\\Users\\Maste\\source\\repos\\LudoGame\\BL\\JuegoLudo.cs",
               "RelativeToolTip": "BL\\JuegoLudo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T20:53:38.685Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T20:53:38.685Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "Jugador.cs",
               "DocumentMoniker": "C:\\Users\\Maste\\source\\repos\\LudoGame\\BL\\Jugador.cs",
               "RelativeDocumentMoniker": "BL\\Jugador.cs",
               "ToolTip": "C:\\Users\\Maste\\source\\repos\\LudoGame\\BL\\Jugador.cs",
               "RelativeToolTip": "BL\\Jugador.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAA7wB4AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T20:51:23.93Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-10-24T20:51:23.93Z"
             },
             {
               "$type": "Document",
@@ -79,22 +76,21 @@
               "RelativeDocumentMoniker": "LudoGame\\LudoForm.cs",
               "ToolTip": "C:\\Users\\Maste\\source\\repos\\LudoGame\\LudoGame\\LudoForm.cs",
               "RelativeToolTip": "LudoGame\\LudoForm.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAwwGkAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-10-24T20:40:41.289Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "LudoForm.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Maste\\source\\repos\\LudoGame\\LudoGame\\LudoForm.cs",
               "RelativeDocumentMoniker": "LudoGame\\LudoForm.cs",
               "ToolTip": "C:\\Users\\Maste\\source\\repos\\LudoGame\\LudoGame\\LudoForm.cs [Dise\u00F1o]",
               "RelativeToolTip": "LudoGame\\LudoForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-24T18:27:48.238Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-10-24T18:27:48.238Z"
             }
           ]
         }

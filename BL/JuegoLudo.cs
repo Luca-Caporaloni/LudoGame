@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace BL
 {
@@ -16,11 +17,11 @@ namespace BL
 
         public JuegoLudo(int numJugadores, int casillasTotales)
         {
-            Jugadores = new List<Jugador>();
-            for (int i = 0; i < numJugadores; i++)
-            {
-                Jugadores.Add(new Jugador("Jugador " + (i + 1)));
-            }
+            Jugadores = new List<Jugador>
+        {
+            new Jugador("Jugador 1", Color.Blue),
+            new Jugador("Jugador 2", Color.Red)
+        };
 
             TurnoActual = 0;
             CasillasTotales = casillasTotales;

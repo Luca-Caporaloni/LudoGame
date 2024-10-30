@@ -31,6 +31,7 @@
             this.btnTirarDado = new System.Windows.Forms.Button();
             this.lblNumeroDado = new System.Windows.Forms.Label();
             this.lblTurno = new System.Windows.Forms.Label();
+            this.lblNarrador = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnTirarDado
@@ -61,20 +62,29 @@
             this.lblTurno.TabIndex = 2;
             this.lblTurno.Text = "Turno: Jugador 1";
             // 
+            // lblNarrador
+            // 
+            this.lblNarrador.AutoSize = true;
+            this.lblNarrador.Location = new System.Drawing.Point(710, 19);
+            this.lblNarrador.Name = "lblNarrador";
+            this.lblNarrador.Size = new System.Drawing.Size(48, 13);
+            this.lblNarrador.TabIndex = 3;
+            this.lblNarrador.Text = "Narrador";
+            // 
             // LudoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblNarrador);
             this.Controls.Add(this.lblTurno);
             this.Controls.Add(this.lblNumeroDado);
             this.Controls.Add(this.btnTirarDado);
             this.Name = "LudoForm";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Text = "Ludo Game";
+            this.Load += new System.EventHandler(this.LudoForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -82,6 +92,6 @@
         private System.Windows.Forms.Button btnTirarDado;
         private System.Windows.Forms.Label lblNumeroDado;
         private System.Windows.Forms.Label lblTurno;
+        private System.Windows.Forms.Label lblNarrador;
     }
 }
-

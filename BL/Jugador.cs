@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing;
 
 namespace BL
 {
@@ -11,12 +8,14 @@ namespace BL
         public string Nombre { get; set; }
         public int PosicionActual { get; set; }
         public bool PerdioTurno { get; set; }
+        public Color ColorFicha { get; set; }
 
-        public Jugador(string nombre)
+        public Jugador(string nombre, Color colorFicha)
         {
             Nombre = nombre;
             PosicionActual = 0;
             PerdioTurno = false;
+            ColorFicha = colorFicha;
         }
 
         public void Mover(int cantidad)

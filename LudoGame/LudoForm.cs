@@ -32,10 +32,9 @@ namespace LudoGame
         private void InicializarTablero()
         {
             casillas = new List<Label>();
-            int casillasPorFila = 10;  // Por ejemplo, una fila de 10 casillas
-            int tamanioCasilla = 50;   // Tamaño de cada casilla en píxeles
+            int casillasPorFila = 10;  // Número de casillas por fila
+            int tamanioCasilla = 50;   // Tamaño de cada casilla
 
-            // Crear un panel para contener las casillas
             Panel tableroPanel = new Panel
             {
                 Size = new Size(casillasPorFila * tamanioCasilla, casillasPorFila * tamanioCasilla),
@@ -44,24 +43,35 @@ namespace LudoGame
             };
             this.Controls.Add(tableroPanel);
 
-            // Generar casillas dentro del panel
+            // Crear el tablero en forma de zigzag
+            bool zigzag = false;
             for (int i = 0; i < 100; i++)
             {
+                int row = i / casillasPorFila;
+                int column = zigzag ? casillasPorFila - (i % casillasPorFila) - 1 : i % casillasPorFila;
+
                 Label casilla = new Label
                 {
                     Size = new Size(tamanioCasilla, tamanioCasilla),
                     BorderStyle = BorderStyle.FixedSingle,
                     TextAlign = ContentAlignment.MiddleCenter,
                     Text = (i + 1).ToString(),
-                    Location = new Point((i % casillasPorFila) * tamanioCasilla, (i / casillasPorFila) * tamanioCasilla)
+                    Location = new Point(column * tamanioCasilla, row * tamanioCasilla),
+                    BackColor = Color.White // Color normal de casillas
                 };
+
+                if ((i + 1) % 10 == 0) // Casillas trampa
+                {
+                    casilla.BackColor = Color.Orange;
+                }
 
                 casillas.Add(casilla);
                 tableroPanel.Controls.Add(casilla);
+
+                if ((i + 1) % casillasPorFila == 0)
+                    zigzag = !zigzag;  // Alternar el zigzag
             }
         }
-
-
 
         private void btnTirarDado_Click(object sender, EventArgs e)
         {
@@ -77,6 +87,9 @@ namespace LudoGame
             // Actualizar la posición del jugador visualmente
             ActualizarPosicionJugador(jugador);
 
+            // Narrar el evento
+            NarrarMovimiento(jugador, numeroDado);
+
             // Cambiar el turno
             juego.CambiarTurno();
             lblTurno.Text = "Turno: " + juego.ObtenerJugadorActual().Nombre;
@@ -84,16 +97,27 @@ namespace LudoGame
 
         private void ActualizarPosicionJugador(Jugador jugador)
         {
-            // Limpiar las posiciones anteriores
+            // Limpiar posiciones anteriores
             foreach (Label casilla in casillas)
             {
-                casilla.BackColor = Color.White;
+                casilla.BackColor = casilla.BackColor == Color.Orange ? Color.Orange : Color.White;
             }
 
-            // Colocar al jugador en la nueva posición
+            // Colocar al jugador en su nueva posición
             if (jugador.PosicionActual < casillas.Count)
             {
-                casillas[jugador.PosicionActual].BackColor = Color.Red; // Cambiar el color para representar la ficha del jugador
+                casillas[jugador.PosicionActual].BackColor = jugador.ColorFicha;
+            }
+        }
+
+        private void NarrarMovimiento(Jugador jugador, int numeroDado)
+        {
+            // Mostrar información sobre el movimiento
+            lblNarrador.Text = $"{jugador.Nombre} tiró un {numeroDado} y avanzó a la casilla {jugador.PosicionActual + 1}.";
+
+            if (juego.CasillasConTrampa.Contains(jugador.PosicionActual))
+            {
+                lblNarrador.Text += " ¡Cayó en una casilla trampa y regresa al inicio!";
             }
         }
     }
