@@ -1,39 +1,56 @@
 ﻿using System;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 
 namespace Networking
 {
     public class SocketClient
     {
         private TcpClient client;
+        private NetworkStream stream;
+        private string serverIp;
+        private int serverPort;
+
         public event Action<string> OnMessageReceived;
 
-        public void ConnectToServer(string serverIp, int port = 8080)
+        public SocketClient(string ip, int port)
         {
-            client = new TcpClient();
-            client.Connect(serverIp, port);
-            StartReading();
+            serverIp = ip;
+            serverPort = port;
         }
 
-        private async void StartReading()
+        public void Connect()
+        {
+            client = new TcpClient(serverIp, serverPort);
+            stream = client.GetStream();
+            Console.WriteLine("Conectado al servidor.");
+            Thread receiveThread = new Thread(ReceiveMessages);
+            receiveThread.Start();
+        }
+
+        private void ReceiveMessages()
         {
             byte[] buffer = new byte[1024];
-            while (true)
+            int bytesRead;
+
+            while ((bytesRead = stream.Read(buffer, 0, buffer.Length)) != 0)
             {
-                int byteCount = await client.GetStream().ReadAsync(buffer, 0, buffer.Length);
-                if (byteCount > 0)
-                {
-                    string message = Encoding.UTF8.GetString(buffer, 0, byteCount);
-                    OnMessageReceived?.Invoke(message);
-                }
+                string message = Encoding.ASCII.GetString(buffer, 0, bytesRead);
+                OnMessageReceived?.Invoke(message);
             }
         }
 
         public void SendMessage(string message)
         {
-            byte[] buffer = Encoding.UTF8.GetBytes(message);
-            client.GetStream().Write(buffer, 0, buffer.Length);
+            byte[] data = Encoding.ASCII.GetBytes(message);
+            stream.Write(data, 0, data.Length);
+        }
+
+        public void Disconnect()
+        {
+            client.Close();
+            Console.WriteLine("Desconectado del servidor.");
         }
     }
 }

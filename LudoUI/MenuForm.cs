@@ -10,11 +10,34 @@ using System.Windows.Forms;
 
 namespace LudoUI
 {
-    public partial class Form1 : Form
+    public partial class MenuForm : Form
     {
-        public Form1()
+        public MenuForm()
         {
             InitializeComponent();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIniciarJuego_Click(object sender, EventArgs e)
+        {
+            // Recoge las configuraciones del jugador
+            string nombreJugador = txtNombreJugador.Text;
+            bool esPrivado = rbPrivado.Checked;
+
+            // Crea y abre LudoForm con la configuración
+
+            this.Hide(); // Oculta el menú
+
+            this.Show(); // Muestra el menú de nuevo al cerrar el juego
         }
     }
 }

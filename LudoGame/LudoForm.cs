@@ -9,30 +9,52 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace LudoGame
 {
     public partial class LudoForm : Form
     {
+
+
         private JuegoLudo juego;
         private List<Label> casillas;
 
         private string nombreJugador;
         private bool esPrivado;
 
-        public LudoForm(string nombreJugador, bool esPrivado)
+        public LudoForm(string nombreJugador, bool esPrivado, string serverIp, int serverPort)
         {
             InitializeComponent();
+
+
+
             juego = new JuegoLudo(2, 100); // 2 jugadores y 100 casillas
 
             this.nombreJugador = nombreJugador;
             this.esPrivado = esPrivado;
 
-            lblJugador.Text = "Jugador: " + nombreJugador;
+            lblTurno.Text = "Jugador: " + nombreJugador;
 
             // Configura la partida según sea pública o privada
             ConfigurarPartida(esPrivado);
 
             InicializarTablero();
+        }
+
+        public LudoForm()
+        {
+        }
+
+        private void ConfigurarPartida(bool esPrivado)
+        {
+            if (esPrivado)
+            {
+                // Configura partida privada
+            }
+            else
+            {
+                // Configura partida pública
+            }
         }
 
 
@@ -87,22 +109,20 @@ namespace LudoGame
 
         private void btnTirarDado_Click(object sender, EventArgs e)
         {
-            // Tirar el dado y mostrar el número
             int numeroDado = juego.TirarDado();
             lblNumeroDado.Text = "Dado: " + numeroDado;
 
-            // Mover al jugador actual
             Jugador jugador = juego.ObtenerJugadorActual();
             jugador.Mover(numeroDado);
             juego.VerificarTrampa(jugador);
 
-            // Actualizar la posición del jugador visualmente
             ActualizarPosicionJugador(jugador);
-
-            // Narrar el evento
             NarrarMovimiento(jugador, numeroDado);
 
-            // Cambiar el turno
+            // Envía el estado del jugador al servidor
+            string message = $"{jugador.Nombre} avanzó a la casilla {jugador.PosicionActual + 1}.";
+
+
             juego.CambiarTurno();
             lblTurno.Text = "Turno: " + juego.ObtenerJugadorActual().Nombre;
         }
@@ -137,5 +157,15 @@ namespace LudoGame
         {
 
         }
+
+        private void OnMessageReceived(string message)
+        {
+            // Procesa el mensaje recibido (por ejemplo, un movimiento de otro jugador)
+            Invoke(new Action(() =>
+            {
+                lblNarrador.Text += "\n" + message;
+            }));
+        }
+
     }
 }
