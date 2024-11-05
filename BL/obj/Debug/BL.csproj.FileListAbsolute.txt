@@ -4,3 +4,9 @@ C:\Users\Maste\source\repos\LudoGame\BL\obj\Debug\BL.csproj.AssemblyReference.ca
 C:\Users\Maste\source\repos\LudoGame\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
 C:\Users\Maste\source\repos\LudoGame\BL\obj\Debug\BL.dll
 C:\Users\Maste\source\repos\LudoGame\BL\obj\Debug\BL.pdb
+G:\Ludo\LudoGame\BL\bin\Debug\BL.dll
+G:\Ludo\LudoGame\BL\bin\Debug\BL.pdb
+G:\Ludo\LudoGame\BL\obj\Debug\BL.csproj.AssemblyReference.cache
+G:\Ludo\LudoGame\BL\obj\Debug\BL.csproj.CoreCompileInputs.cache
+G:\Ludo\LudoGame\BL\obj\Debug\BL.dll
+G:\Ludo\LudoGame\BL\obj\Debug\BL.pdb

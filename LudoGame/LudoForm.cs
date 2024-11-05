@@ -16,10 +16,22 @@ namespace LudoGame
         private JuegoLudo juego;
         private List<Label> casillas;
 
-        public LudoForm()
+        private string nombreJugador;
+        private bool esPrivado;
+
+        public LudoForm(string nombreJugador, bool esPrivado)
         {
             InitializeComponent();
             juego = new JuegoLudo(2, 100); // 2 jugadores y 100 casillas
+
+            this.nombreJugador = nombreJugador;
+            this.esPrivado = esPrivado;
+
+            lblJugador.Text = "Jugador: " + nombreJugador;
+
+            // Configura la partida según sea pública o privada
+            ConfigurarPartida(esPrivado);
+
             InicializarTablero();
         }
 
@@ -119,6 +131,11 @@ namespace LudoGame
             {
                 lblNarrador.Text += " ¡Cayó en una casilla trampa y regresa al inicio!";
             }
+        }
+
+        private void LudoForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
